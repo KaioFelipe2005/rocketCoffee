@@ -1,0 +1,54 @@
+/* --- ROOT --- */
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+  }
+
+  :root {
+    --defaultFont: "Manrope", sans-serif;
+  }
+
+/* --- DESKTOP CSS --- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    font-family: var(--defaultFont);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.purple-blur-bg{
+    width: 300px;
+    height: 300px;
+    background: var(--button);
+    position: fixed;
+    filter: blur(200px);
+
+    pointer-events: none;
+
+    z-index: -100;
+}
+
+.purple-blur-bg:nth-child(1){
+    left: 0;
+    bottom: 0;
+}
+.purple-blur-bg:nth-child(2){
+    top: 0;
+    right: 0;
+}
